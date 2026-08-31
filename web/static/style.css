@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f14;
+    color: #e7edf5;
+}
+
+.container {
+    width: 94%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    color: #8793a3;
+}
+
+#status {
+    background: #13261b;
+    color: #53d67a;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #111720;
+    border: 1px solid #202936;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card span {
+    color: #8490a0;
+    font-size: 12px;
+}
+
+.card strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.panel {
+    background: #111720;
+    border: 1px solid #202936;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid #202936;
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+button {
+    background: #202b39;
+    border: 0;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2d3a4a;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 13px;
+    border-bottom: 1px solid #202936;
+    white-space: nowrap;
+}
+
+th {
+    color: #8d9aaa;
+    font-size: 12px;
+}
+
+td {
+    font-size: 13px;
+}
+
+.severity {
+    font-weight: bold;
+}
+
+.CRITICAL {
+    color: #ff5252;
+}
+
+.HIGH {
+    color: #ff9d52;
+}
+
+.MEDIUM {
+    color: #ffd452;
+}
+
+.LOW {
+    color: #55d47b;
+}
+
+.risk-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #202936;
+}
+
+.risk-value {
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        display: block;
+    }
+
+    #status {
+        display: inline-block;
+        margin-top: 15px;
+    }
+}

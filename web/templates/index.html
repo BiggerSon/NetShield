@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NetShield IDS</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div>
+            <h1>🛡️ NetShield IDS</h1>
+            <p>Network Intrusion Detection System</p>
+        </div>
+
+        <div id="status">
+            ● ONLINE
+        </div>
+
+    </header>
+
+
+    <section class="cards">
+
+        <div class="card">
+            <span>PACKETS</span>
+            <strong id="packets">0</strong>
+        </div>
+
+        <div class="card">
+            <span>ALERTS</span>
+            <strong id="alerts">0</strong>
+        </div>
+
+        <div class="card">
+            <span>MONITORED HOSTS</span>
+            <strong id="hosts">0</strong>
+        </div>
+
+        <div class="card">
+            <span>UPTIME</span>
+            <strong id="uptime">0s</strong>
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="panel-header">
+            <h2>🚨 Security Events</h2>
+            <button onclick="loadEvents()">
+                Refresh
+            </button>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Time</th>
+                        <th>Type</th>
+                        <th>Severity</th>
+                        <th>Risk</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Message</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="events">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="panel-header">
+            <h2>🎯 IP Risk Scores</h2>
+        </div>
+
+        <div id="risks">
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
