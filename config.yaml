@@ -1,0 +1,59 @@
+app:
+  name: "NetShield IDS"
+  version: "2.0.0"
+
+capture:
+  interface: null
+  promiscuous: true
+
+detection:
+  window_seconds: 10
+
+  syn:
+    enabled: true
+    threshold: 100
+
+  udp:
+    enabled: true
+    threshold: 250
+
+  icmp:
+    enabled: true
+    threshold: 100
+
+  port_scan:
+    enabled: true
+    unique_ports: 20
+
+  host_scan:
+    enabled: true
+    unique_hosts: 25
+
+  arp:
+    enabled: true
+
+adaptive:
+  enabled: true
+  multiplier: 3.0
+  minimum_baseline: 10
+
+alerts:
+  console: true
+
+  discord:
+    enabled: false
+    webhook_url: ""
+
+  cooldown_seconds: 30
+
+dashboard:
+  enabled: true
+  host: "127.0.0.1"
+  port: 8080
+
+logging:
+  json_file: "logs/security_events.json"
+  csv_file: "logs/security_events.csv"
+
+mitigation:
+  enabled: false
